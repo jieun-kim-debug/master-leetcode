@@ -25,4 +25,4 @@ class Solution:
         for p in range(len(s)-1):
             res = max(res, expand(p,p), expand(p,p+1), key=len)
         
-        return s
+        return res
