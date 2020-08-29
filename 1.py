@@ -23,8 +23,10 @@ class Solution:
         num_maps = {}
 
         for i, num in enumerate(num_maps):
-            num_maps[num]=i
-            print(num_maps)
         
             if target-num in num_maps:
                 return [num_maps[target-num],i]
+            # i=0, num=2, target=9 {}
+            # i=1, num=7, target=9, {2}
+            num_maps[num]=i
+            
