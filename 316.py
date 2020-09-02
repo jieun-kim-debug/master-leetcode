@@ -6,6 +6,8 @@
 #2. 중복되는 char이 들어오면 continue하고 pop된 char remove
 #3. stack에 쌓인 문자들 join() 
 
+import collections
+
 class Solution:
     def removeDuplicateLetters(self, s: str) -> str:
         counter, seen, stack = collections.Counter(s), set(), []
