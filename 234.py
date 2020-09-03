@@ -4,6 +4,7 @@
 #4. q에 양끝쪽이 같지 않으면 false
 #5. return True
 
+import collections
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
