@@ -14,9 +14,9 @@ class Solution:
     def isPalindrome(self, head: ListNode) -> bool:
         q: Deque = collections.deque()
         
-        # 예외처리?
-        # if not head:
-        #     return True
+        # 예외처리!
+        if not head:
+            return True
         
         node = head
         
