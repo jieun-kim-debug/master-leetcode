@@ -10,6 +10,8 @@ class Solution:
 #1. left, right(len-1 index start 0) pointer
 #2. while left < right:
 #3. s[left] <-> s[right] swap
+#4. pointer loc change
+
 class Solution:
     def reverseString(self, s: List[str]) -> None:
         left, right = 0, len(s)-1
