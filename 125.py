@@ -1,3 +1,5 @@
+#sol1. list
+
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         # palindrome=앞뒤가 똑같은 문자열
@@ -17,4 +19,21 @@ class Solution:
         while len(strs)>1:
             if strs.pop(0) != strs.pop():
                 return False
+        return True
+
+#sol2. deque
+
+import collections
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        strs : Deque = collections.deque()
+
+        for char in str:
+            if char.isalnum():
+                strs.append(char.lower())
+
+            while len(strs) > 1:
+                strs.popleft() != strs.pop()
+                return False
+        
         return True
