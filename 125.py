@@ -22,7 +22,6 @@ class Solution:
         return True
 
 #sol2. deque
-
 import collections
 class Solution:
     def isPalindrome(self, s: str) -> bool:
@@ -37,3 +36,13 @@ class Solution:
                 return False
         
         return True
+
+#sol3. 정규표현식
+import re
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        s = s.lower()
+        # 정규표현식으로 불필요한 문자 필터링
+        s = re.sub('[^a-z0-9]','',s)
+
+        return s == s[::-1]
