@@ -27,9 +27,9 @@ class Solution:
                 # return origin index (add index of nums)
                 return nums.index(num), nums[i+1:].index(complement) + (i+1)
 
-
-#1. 빈 딕셔너리 생성
-#2. enumerate를 써서 키와 값을 바꾸어 딕셔너리로 저장
+#sol3. dictionary
+#1. make empty dictionary
+#2. enumerate (change key<->value)
 #3. if target-num in 딕셔너리
 #4. 딕셔너리[target-num],index
 
@@ -37,6 +37,7 @@ class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         num_maps = {}
 
+        # enumerate (change key<->value)
         for i, num in enumerate(num_maps):
         
             if target-num in num_maps:
