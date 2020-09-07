@@ -4,14 +4,29 @@ Output: [0,1]
 Output: Because nums[0] + nums[1] == 9, we return [0, 1]
 '''
 
-"""브루투 포스 방식으로 시간 복잡도 O(n**2)
+#sol1. brute force O(n**2)
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         for i in range(len(nums)):
             for j in range(i+1, len(nums)):
                 if nums[i]+nums[j]==target:
                     return[i,j]
-"""
+
+#sol2. in search
+#1. enumerate index, value
+#2. target-value
+#3. index()
+
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        for i, num in enumerate:
+            complement = target - num
+
+            # except index of nums
+            if complement in nums[i+1:]:
+                # return origin index (add index of nums)
+                return nums.index(num), nums[i+1:].index(complement) + (i+1)
+
 
 #1. 빈 딕셔너리 생성
 #2. enumerate를 써서 키와 값을 바꾸어 딕셔너리로 저장
