@@ -19,3 +19,20 @@ class Solution:
                 pair = []
                 
         return sum
+
+#sol2. even number index
+class Solution:
+    def arrayPairSum(self, nums: List[int]) -> int:
+        # set variable
+        sum = 0
+        # ascending nums list
+        nums.sort()
+        
+        # index, value enumerate 
+        for i, n in enumerate(nums):
+            # even number index(cuz ascending list)
+            if i % 2 == 0:
+                sum += n
+                
+        return sum
+        
