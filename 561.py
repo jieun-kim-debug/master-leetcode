@@ -35,4 +35,9 @@ class Solution:
                 sum += n
                 
         return sum
-        
+
+#sol3. pythonic
+class Solution:
+    def arrayPairSum(self, nums: List[int]) -> int:
+        # ascending nums list + add even number index
+        return sum(sorted(nums)[::2])
