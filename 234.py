@@ -4,6 +4,8 @@ Output: true
 '''
 
 #sol1. deque 
+# *** deque is double-ended queue: o(1)
+
 #1. 양방향에서 데이터 처리할 수 있는 deque 이용
 #2. node가 존재하는 동안 node의 값이 q.append
 #3. node=node.next
@@ -56,3 +58,5 @@ class Solution:
                 return False
         
         return True
+        
+# *** but, python list pop(0): all elements is shifting 1 => o(n)
