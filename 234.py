@@ -70,7 +70,7 @@ class Solution:
         # use fast runner to reverse linked list
         while fast and fast.next:
             fast = fast.next
-            rev, rev.next, slow = slow, rev, rev.next
+            rev, rev.next, slow = slow, rev, slow.next
             
             # except palindrome
             if fast:
