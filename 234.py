@@ -60,3 +60,24 @@ class Solution:
         return True
         
 # *** but, python list pop(0): all elements is shifting 1 => o(n)
+
+#sol3. runner
+class Solution:
+    def isPalindrome(self, head: ListNode) -> bool:
+        rev = None
+        slow = fast = head
+        
+        # use fast runner to reverse linked list
+        while fast and fast.next:
+            fast = fast.next
+            rev, rev.next, slow = slow, rev, rev.next
+            
+            # except palindrome
+            if fast:
+                slow = slow.next
+                
+            # check palindrome
+            while rev and rev.val == slow.val:
+                slow, rev = slow.next, rev.next
+        
+        return not rev
